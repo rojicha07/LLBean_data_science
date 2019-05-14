@@ -52,15 +52,20 @@ for paciente in agenda_sorted:
 
 #Sexta pregunta:
 print("Sexta pregunta:")
-for paciente in agenda_sorted:
-    if paciente[5] == 'dolor':
-        agenda_sorted.remove(paciente)
+restart = True
+while restart:
+    for paciente in agenda_sorted:
+        if paciente[5] == 'dolor':
+            agenda_sorted.remove(paciente)
+            restart = True
+            break
+        restart = False
 
 agenda_sorted2 = sorted(agenda_sorted, key=lambda x: x[3],)
 for paciente in agenda_sorted2:
     print(paciente)
 
-#PRIMERA PARTE
+#SEGUNDA PARTE
 print("**SEGUNDA PARTE**:")
 
 #3.1
